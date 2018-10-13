@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="css/admin.css" />
+<title> Admin Home Page</title>
+</head>
+<body background="img/final.jpg" onload="startTime()">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; PLEXTRA </span>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="admin.html">HOME</a>
+  <a href="adminmovies.php">MOVIES</a>
+  <a href="adminevents.php">EVENTS</a>
+  <a href="adminsports.php">SPORTS</a>
+  <a href="admindata.php">MANAGE USER PROFILES</a>
+  <a href="AdminFeedback.php">USER FEEDBACK</a>
+</div>
+
+<div id="main">
+  <h2>Welcome Admin</h2>
+  <div id="time"></div>
+  
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "265px";
+    document.getElementById("main").style.marginLeft = "265px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML = "It is currently " +
+    h + ":" + m + ":" + s + " at the PLEXTRA headquarters here at Halifax.";
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+     
+</body>
+</html> 

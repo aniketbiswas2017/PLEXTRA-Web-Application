@@ -1,0 +1,49 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #444;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 70px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #818181;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 24px;
+    font-size: 38px;
+    margin-left: 49px;
+}
+
+#main {
+    transition: margin-left .3s;
+    padding: 15px;
+}
+
+@media screen and (max-height: 460px) {
+  .sidenav {padding-top: 14px;}
+  .sidenav a {font-size: 17px;}
+}
